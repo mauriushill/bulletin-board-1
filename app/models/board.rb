@@ -8,7 +8,9 @@
 #  updated_at :datetime         not null
 #
 class Board < ApplicationRecord
-  # belongs_to(:active_post, class_name: "Post", foreign_key: "board_id")
+  validates(:name, { :presence => true, :uniqueness => true })
+
+
   
 
 end
